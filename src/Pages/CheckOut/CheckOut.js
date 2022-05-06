@@ -1,7 +1,7 @@
 import React from "react";
 
-const NotFound = () => {
+const CheckOut = () => {
   return <div></div>;
 };
 
-export default NotFound;
+export default CheckOut;
