@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../Banner/Banner";
+import Items from "../Items/Items";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         Welcome To My Warehouse Inventory Management Website
       </h1>
       <Banner></Banner>
+      <Items></Items>
     </div>
   );
 };
