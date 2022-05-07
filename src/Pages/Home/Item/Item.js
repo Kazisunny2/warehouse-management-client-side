@@ -27,7 +27,14 @@ const Item = ({ item }) => {
           <tr>
             <td>1</td>
             <td>{name}</td>
-            <td>{img}</td>
+            <td>
+              <img
+                src={img}
+                className=" w-10 card-img-top"
+                style={{ width: "5rem" }}
+                alt="..."
+              />
+            </td>
             <td>{description}</td>
             <td>{price}</td>
             <td>{quantity}</td>
