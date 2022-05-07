@@ -6,7 +6,7 @@ const Item = ({ item }) => {
   const navigate = useNavigate();
 
   const navigateToServiceDetail = (id) => {
-    navigate(`/service/${id}`);
+    navigate(`/item/${id}`);
   };
   return (
     <div className="g-5 col-sm-12 col-md-6 col-lg-4">

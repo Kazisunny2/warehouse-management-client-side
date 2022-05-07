@@ -8,6 +8,7 @@ import Header from "./Pages/Shared/Header/Header";
 import RequiredAuth from "./Pages/Login/RequiredAuth/RequiredAuth";
 import Checkout from "./Pages/Checkout/Checkout";
 import AddItem from "./Pages/AddItem/AddItem";
+import ManageInventories from "./Pages/ManageInventories/ManageInventories";
 
 function App() {
   return (
@@ -30,6 +31,14 @@ function App() {
           element={
             <RequiredAuth>
               <AddItem></AddItem>
+            </RequiredAuth>
+          }
+        ></Route>
+        <Route
+          path="/manageinventories"
+          element={
+            <RequiredAuth>
+              <ManageInventories></ManageInventories>
             </RequiredAuth>
           }
         ></Route>
