@@ -10,6 +10,8 @@ import Checkout from "./Pages/Checkout/Checkout";
 import AddItem from "./Pages/AddItem/AddItem";
 import ManageInventories from "./Pages/ManageInventories/ManageInventories";
 import Blogs from "./Pages/Blogs/Blogs";
+import NotFound from "./Pages/Shared/NotFound/NotFound";
+import UpdateItem from "./Pages/UpdateItem/UpdateItem";
 
 function App() {
   return (
@@ -37,6 +39,14 @@ function App() {
           }
         ></Route>
         <Route
+          path="/update/:id"
+          element={
+            <RequiredAuth>
+              <UpdateItem></UpdateItem>
+            </RequiredAuth>
+          }
+        ></Route>
+        <Route
           path="/manageinventories"
           element={
             <RequiredAuth>
@@ -44,6 +54,7 @@ function App() {
             </RequiredAuth>
           }
         ></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

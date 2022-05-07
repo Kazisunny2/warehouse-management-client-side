@@ -15,7 +15,7 @@ const Items = () => {
         Our Items
       </h1>
       <div className="row">
-        {items.map((item) => (
+        {items.slice(0, 6).map((item) => (
           <Item key={item.id} item={item}></Item>
         ))}
       </div>

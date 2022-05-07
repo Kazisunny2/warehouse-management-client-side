@@ -1,12 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Item = ({ item }) => {
   const { _id, name, img, description, price, supplier, quantity } = item;
   const navigate = useNavigate();
 
   const navigateToServiceDetail = (id) => {
-    navigate(`/item/${id}`);
+    navigate(`/inventory/${id}`);
   };
   return (
     <div className="g-5 col-sm-12 col-md-6 col-lg-4">
@@ -25,12 +25,16 @@ const Item = ({ item }) => {
           </p>
           <p>Quantity:{quantity}</p>
           <p>Supplier:{supplier}</p>
-          <button
-            onClick={() => navigateToServiceDetail(_id)}
-            className="btn btn-primary "
-          >
-            Update
-          </button>
+          <div>
+            <Link to={`/update/${item._id}`}>
+              <button
+                onClick={() => navigateToServiceDetail(_id)}
+                className="btn btn-primary "
+              >
+                Update
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
