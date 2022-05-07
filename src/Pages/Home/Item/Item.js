@@ -10,7 +10,7 @@ const Item = ({ item }) => {
   };
   return (
     <div className="g-5 col-sm-12 col-md-6 col-lg-4">
-      <div className="m-4 card" style={{ width: "18rem" }}>
+      <div className="m-4 card" style={{ width: "30rem" }}>
         <img
           src={img}
           className="w-100 card-img-top"

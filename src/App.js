@@ -7,6 +7,7 @@ import Register from "./Pages/Login/Register/Register";
 import Header from "./Pages/Shared/Header/Header";
 import RequiredAuth from "./Pages/Login/RequiredAuth/RequiredAuth";
 import Checkout from "./Pages/Checkout/Checkout";
+import AddItem from "./Pages/AddItem/AddItem";
 
 function App() {
   return (
@@ -21,6 +22,14 @@ function App() {
           element={
             <RequiredAuth>
               <Checkout></Checkout>
+            </RequiredAuth>
+          }
+        ></Route>
+        <Route
+          path="/additem"
+          element={
+            <RequiredAuth>
+              <AddItem></AddItem>
             </RequiredAuth>
           }
         ></Route>
