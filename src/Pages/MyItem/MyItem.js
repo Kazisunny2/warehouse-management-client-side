@@ -13,6 +13,8 @@ const MyItem = () => {
       const url = `http://localhost:5000/myitem?email=${email}`;
       const { data } = await axios.get(url);
       setItems(data);
+      const myItem = items.filter((item) => item.email === user.email);
+      setItems(myItem);
     };
     getItems();
   }, []);

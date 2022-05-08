@@ -19,12 +19,6 @@ const AddItem = () => {
       .then((result) => {
         console.log(result);
       });
-    // axios.post("http://localhost:5000/myitem", item).then((response) => {
-    //   const { data } = response;
-    //   if (data.insertedId) {
-    //     toast("your item is added!!");
-    //   }
-    // });
   };
 
   return (
