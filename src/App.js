@@ -6,12 +6,12 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import Header from "./Pages/Shared/Header/Header";
 import RequiredAuth from "./Pages/Login/RequiredAuth/RequiredAuth";
-import Checkout from "./Pages/Checkout/Checkout";
 import AddItem from "./Pages/AddItem/AddItem";
 import ManageInventories from "./Pages/ManageInventories/ManageInventories";
 import Blogs from "./Pages/Blogs/Blogs";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import UpdateItem from "./Pages/UpdateItem/UpdateItem";
+import MyItem from "./Pages/MyItem/MyItem";
 
 function App() {
   return (
@@ -19,14 +19,15 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route
-          path="/checkout"
+          path="/myitem"
           element={
             <RequiredAuth>
-              <Checkout></Checkout>
+              <MyItem></MyItem>
             </RequiredAuth>
           }
         ></Route>

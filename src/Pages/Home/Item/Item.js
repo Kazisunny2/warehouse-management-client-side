@@ -42,7 +42,7 @@ const Item = ({ item }) => {
           </p>
           <p>Quantity:{quantity}</p>
           <p>Supplier:{supplier}</p>
-          <div className="d-flex gap={3}">
+          <div className="col-md-5  offset-2 a">
             <Link to={`/update/${item._id}`}>
               <button
                 onClick={() => navigateToServiceDetail(_id)}
