@@ -6,7 +6,7 @@ const UpdateItem = () => {
   const { id } = useParams();
   const [item, setItem] = useState({});
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://nameless-wave-22117.herokuapp.com/inventory/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
@@ -16,7 +16,7 @@ const UpdateItem = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://nameless-wave-22117.herokuapp.com/inventory/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
