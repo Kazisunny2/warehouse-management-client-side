@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import auth from "../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 import Item from "../Home/Item/Item";
 
 const MyItem = () => {
+  const [user] = useAuthState(auth);
   const [items, setItems] = useState([]);
-
   useEffect(() => {
-    fetch(`http://localhost:5000/inventory/`)
-      .then((res) => res.json())
-      .then((data) => setItems(data));
+    const getItems = async () => {
+      const email = user.email;
+      const url = `http://localhost:5000/myitem?email=${email}`;
+      const { data } = await axios.get(url);
+      setItems(data);
+    };
+    getItems();
   }, []);
   return (
-    <div className="row row-cols-1 row-cols-md-3 g-4 mx-auto">
-      <h2>My Items</h2>
-      <div>
+    <div>
+      <h2>My items: {items.length}</h2>
+      <div className="row">
         {items.map((item) => (
           <Item key={item.id} item={item}></Item>
         ))}

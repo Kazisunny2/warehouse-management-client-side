@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 
 const AddItem = () => {
   const { register, handleSubmit } = useForm();
@@ -17,7 +19,14 @@ const AddItem = () => {
       .then((result) => {
         console.log(result);
       });
+    // axios.post("http://localhost:5000/myitem", item).then((response) => {
+    //   const { data } = response;
+    //   if (data.insertedId) {
+    //     toast("your item is added!!");
+    //   }
+    // });
   };
+
   return (
     <div className="w-50 mx-auto">
       <h2>Please add a item</h2>
@@ -57,6 +66,7 @@ const AddItem = () => {
         />
         <input type="submit" value="Add Item" />
       </form>
+      <ToastContainer />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const Item = ({ item }) => {
   const { _id, name, img, description, price, supplier, quantity } = item;
   const navigate = useNavigate();
 
-  const navigateToServiceDetail = (id) => {
+  const navigateToItemDetail = (id) => {
     navigate(`/inventory/${id}`);
   };
   const handleDelete = (id) => {
@@ -45,7 +45,7 @@ const Item = ({ item }) => {
           <div className="col-md-5  offset-2 a">
             <Link to={`/update/${item._id}`}>
               <button
-                onClick={() => navigateToServiceDetail(_id)}
+                onClick={() => navigateToItemDetail(_id)}
                 className="btn btn-primary "
               >
                 Update

@@ -21,14 +21,14 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
-          Electronics Shop
+          Electronics Inventory
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Items</Nav.Link>
-            <Nav.Link href="/">Banner</Nav.Link>
-            <Nav.Link href="/">Photos</Nav.Link>
+            <Nav.Link href="/home#item">Items</Nav.Link>
+            <Nav.Link href="/home#banner">Banner</Nav.Link>
+            <Nav.Link href="/home#photos">Photos</Nav.Link>
             <Nav.Link as={Link} to="blogs">
               Blogs
             </Nav.Link>

@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "../Banner/Banner";
 import Items from "../Items/Items";
+import Photos from "../Photos/Photos";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       </h1>
       <Banner></Banner>
       <Items></Items>
+      <Photos></Photos>
     </div>
   );
 };
